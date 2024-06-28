@@ -60,18 +60,24 @@ public class HelpLogin {
         ArrayList<Usuario> usuarios = dao.selectUsuario();
         // se sim, abrir o menu
         boolean correto = false;
-        for(Usuario usuarioBanco : usuarios){
-            if(usuarioDado.equals(usuarioBanco.getUsuario()) && senhaDada.equals(usuarioBanco.getSenha1())){
-                correto = true;
-                tipo = usuarioBanco.getTipoUsuario();
-                break;
-            }    
-        }
-        if(correto){
-            abrirMenu(event);
+        if (usuarioDado == null || senhaDada == null || usuarioDado.isEmpty() || senhaDada.isEmpty()){
+            Mensagem.mostrarDialogoAviso("", "", "Preencha todos os campos!");
         } else{
-             Mensagem.mostrarDialogoErro("", "", "Usuario inválido!");
-        } 
+            for(Usuario usuarioBanco : usuarios){
+                if(usuarioDado.equals(usuarioBanco.getUsuario()) && senhaDada.equals(usuarioBanco.getSenha1())){
+                    correto = true;
+                    tipo = usuarioBanco.getTipoUsuario();
+                    break;
+                }    
+            }
+            
+            if(correto){
+                abrirMenu(event);
+            } else{
+                Mensagem.mostrarDialogoErro("", "", "Usuario inválido!");
+            } 
+        }
+        
     }
    
     public UsuarioEnum getTipo() {
