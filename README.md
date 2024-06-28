@@ -1,5 +1,5 @@
 
-# Meu primeiro projeto com seis mesês estudando java
+# Meu primeiro projeto com seis meses estudando java
 
 Um sistema com banco de dados para ter o controle de equipamentos dentro de uma empresa.
 
