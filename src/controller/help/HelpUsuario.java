@@ -47,7 +47,7 @@ public class HelpUsuario {
                 if(verificarUsuarioAdm()){
                     cadastrarNoBanco(usuario);
                 }else{
-                    Mensagem.mostrarDialogoErro("", "", "Você não tem permição para cadastrar usuários! ");
+                    Mensagem.mostrarDialogoErro("", "", "Você não tem permissão para cadastrar usuários! ");
                     limparDadosSenha();
                 }
                 

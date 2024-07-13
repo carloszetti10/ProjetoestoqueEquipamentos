@@ -45,7 +45,7 @@ public class HelpCadastroEquipamento {
                     boolean existe = dao.verificarExistePorPat(equipamentoView);
  
                     if (existe){
-                        Mensagem.mostrarDialogoAviso("","","Equipamento com o patrimonio" + equipamentoView.getPatrimonio() + " Ja cadastrado!");
+                        Mensagem.mostrarDialogoAviso("","","Equipamento com o patrimonio: " + equipamentoView.getPatrimonio() + " Ja cadastrado!");
                     }else {
                         dao.insert(equipamentoView); 
                         limparCampos();
