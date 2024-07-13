@@ -3,17 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Carlos%20Zetti/Documents/NetBeansProjects/ProjetoControleEquipamento/src/controller/help/HelpCadastroEquipamento.java</file>
+            <file>file:/C:/Users/Carlos%20Zetti/Documents/NetBeansProjects/ProjetoControleEquipamento/src/gui/ListaEquipamentosFXML.fxml</file>
             <file>file:/C:/Users/Carlos%20Zetti/Documents/NetBeansProjects/ProjetoControleEquipamento/src/controller/help/HelpUsuario.java</file>
             <file>file:/C:/Users/Carlos%20Zetti/Documents/NetBeansProjects/ProjetoControleEquipamento/src/controller/MenuViewController.java</file>
             <file>file:/C:/Users/Carlos%20Zetti/Documents/NetBeansProjects/ProjetoControleEquipamento/src/model/Usuario.java</file>
             <file>file:/C:/Users/Carlos%20Zetti/Documents/NetBeansProjects/ProjetoControleEquipamento/src/dao/UsuarioDao.java</file>
+            <file>file:/C:/Users/Carlos%20Zetti/Documents/NetBeansProjects/ProjetoControleEquipamento/src/controller/help/HelpMenu.java</file>
+            <file>file:/C:/Users/Carlos%20Zetti/Documents/NetBeansProjects/ProjetoControleEquipamento/src/controller/CadastroEquipamentoViewController.java</file>
+            <file>file:/C:/Users/Carlos%20Zetti/Documents/NetBeansProjects/ProjetoControleEquipamento/src/model/Enum/UsuarioEnum.java</file>
+            <file>file:/C:/Users/Carlos%20Zetti/Documents/NetBeansProjects/ProjetoControleEquipamento/src/controller/CadastroUsuarioViewController.java</file>
+            <file>file:/C:/Users/Carlos%20Zetti/Documents/NetBeansProjects/ProjetoControleEquipamento/src/controller/help/HelpCadastroEquipamento.java</file>
             <file>file:/C:/Users/Carlos%20Zetti/Documents/NetBeansProjects/ProjetoControleEquipamento/src/classesTelas/LoginTelas.java</file>
             <file>file:/C:/Users/Carlos%20Zetti/Documents/NetBeansProjects/ProjetoControleEquipamento/src/model/Enum/EstadoEnum.java</file>
             <file>file:/C:/Users/Carlos%20Zetti/Documents/NetBeansProjects/ProjetoControleEquipamento/src/controller/LoginViewController.java</file>
-            <file>file:/C:/Users/Carlos%20Zetti/Documents/NetBeansProjects/ProjetoControleEquipamento/src/controller/help/HelpMenu.java</file>
             <file>file:/C:/Users/Carlos%20Zetti/Documents/NetBeansProjects/ProjetoControleEquipamento/src/dao/EquipamentoDAO.java</file>
-            <file>file:/C:/Users/Carlos%20Zetti/Documents/NetBeansProjects/ProjetoControleEquipamento/src/model/Enum/UsuarioEnum.java</file>
             <file>file:/C:/Users/Carlos%20Zetti/Documents/NetBeansProjects/ProjetoControleEquipamento/src/controller/help/HelpLogin.java</file>
         </group>
     </open-files>

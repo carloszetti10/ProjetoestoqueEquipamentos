@@ -164,9 +164,11 @@ public class Equipamento {
         return nobreaks;
     }
     
-    
-
-    
-    
-    
+    public static boolean validarPatrimonio(String pat){
+        boolean validado = false;
+        if (pat.length() == 8){
+            validado = true;
+        }
+        return validado;
+    } 
 }

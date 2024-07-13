@@ -149,10 +149,10 @@ public class HelpEditar {
     }
 
     public void pesquisarPorPat(KeyEvent event) {
-         String patrimonio = controller.getPesquisarPat().getText();
-         EquipamentoDAO dao = new EquipamentoDAO();
+        String patrimonio = controller.getPesquisarPat().getText();
+        EquipamentoDAO dao = new EquipamentoDAO();
         try {
-             ArrayList<Equipamento> equipamentoPesquisado = dao.pesquisarPatrimonio(patrimonio);
+            ArrayList<Equipamento> equipamentoPesquisado = dao.pesquisarPatrimonio(patrimonio);
             ObservableList<Equipamento> equipamentos = FXCollections.observableArrayList(equipamentoPesquisado);
             controller.getTabelaEditar().setItems(equipamentos);
             

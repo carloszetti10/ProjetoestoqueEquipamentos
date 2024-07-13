@@ -37,22 +37,26 @@ public class HelpCadastroEquipamento {
             EquipamentoDAO dao = new EquipamentoDAO();
             //pegar campos da view
             Equipamento equipamentoView = pegarDadosView();
-            if(verificarCamposObrigatorios()){
-                boolean existe = dao.verificarExistePorPat(equipamentoView);
+            if (equipamentoView == null){
+                Mensagem.mostrarDialogoAviso("", "", "Informe um patrimônio valido!");
+                controller.getjTextpatrimonio().setText("");
+            } else{
+                if(verificarCamposObrigatorios()){
+                    boolean existe = dao.verificarExistePorPat(equipamentoView);
  
-                if (existe){
-                    Mensagem.mostrarDialogoAviso("","","Equipamento com o patrimonio" + equipamentoView.getPatrimonio() + " Ja cadastrado!");
-                }else {
-                    dao.insert(equipamentoView); 
-                    limparCampos();
-                }
-            } else {
+                    if (existe){
+                        Mensagem.mostrarDialogoAviso("","","Equipamento com o patrimonio" + equipamentoView.getPatrimonio() + " Ja cadastrado!");
+                    }else {
+                        dao.insert(equipamentoView); 
+                        limparCampos();
+                    }
+                } else {
                 Mensagem.mostrarDialogoAviso("", "", "E preciso preencher os campos obrigatorio!");
-            } 
+                }    
+            }
         } catch(SQLException e){
             Mensagem.mostrarDialogoErro("", "", "Não foi possivel cadastrar!");
         }
-
     }
     
     public void limparCampos(){
@@ -79,6 +83,7 @@ public class HelpCadastroEquipamento {
         return EstadoValid && TipoEquipamentoValid && NotaFiscalValid && PatrimonioValid;
     }
     
+    
     public Equipamento pegarDadosView(){
         String destino = controller.getDestino().getText();
         EstadoEnum estado = controller.getComboEstado().getValue();
@@ -86,8 +91,11 @@ public class HelpCadastroEquipamento {
         String responsavel = controller.getjTextresponsavel().getText();
         String notaFiscal = controller.getjTextnotaFiscal().getText();
         String patrimonio = controller.getjTextpatrimonio().getText();
-        
-        return new Equipamento(tipoEquipamento, notaFiscal, patrimonio, destino, responsavel, estado);
+        boolean validarPatrimonio = Equipamento.validarPatrimonio(patrimonio);
+        if (validarPatrimonio){
+            return new Equipamento(tipoEquipamento, notaFiscal, patrimonio, destino, responsavel, estado);
+        }
+        return null;   
     }
     
     
